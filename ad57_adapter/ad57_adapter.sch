@@ -4,9 +4,9 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
+Title "AD57 Adapter PCB"
+Date "2021-01-30"
+Rev "0.1"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -14,10 +14,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Connector:DB15_Female_HighDensity J?
+L Connector:DB15_Female_HighDensity J5
 U 1 1 60152F5A
 P 4425 1900
-F 0 "J?" H 4425 2767 50  0000 C CNN
+F 0 "J5" H 4425 2767 50  0000 C CNN
 F 1 "DB15_Female_HighDensity" H 4425 2676 50  0000 C CNN
 F 2 "" H 3475 2300 50  0001 C CNN
 F 3 " ~" H 3475 2300 50  0001 C CNN
@@ -25,10 +25,10 @@ F 3 " ~" H 3475 2300 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Connector:DB15_Female_HighDensity J?
+L Connector:DB15_Female_HighDensity J6
 U 1 1 60154BF6
 P 4475 3450
-F 0 "J?" H 4475 4317 50  0000 C CNN
+F 0 "J6" H 4475 4317 50  0000 C CNN
 F 1 "DB15_Female_HighDensity" H 4475 4226 50  0000 C CNN
 F 2 "" H 3525 3850 50  0001 C CNN
 F 3 " ~" H 3525 3850 50  0001 C CNN
@@ -36,51 +36,18 @@ F 3 " ~" H 3525 3850 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Connector:RJ45 J?
+L Connector:RJ45 J7
 U 1 1 60155F2E
 P 6450 2325
-F 0 "J?" H 6507 2992 50  0000 C CNN
+F 0 "J7" H 6507 2992 50  0000 C CNN
 F 1 "RJ45_CAN" H 6507 2901 50  0000 C CNN
 F 2 "" V 6450 2350 50  0001 C CNN
 F 3 "~" V 6450 2350 50  0001 C CNN
 	1    6450 2325
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector:Screw_Terminal_01x02 J?
-U 1 1 601581C2
-P 1950 1600
-F 0 "J?" H 2030 1592 50  0000 L CNN
-F 1 "Screw_Terminal_01x02" H 2030 1501 50  0000 L CNN
-F 2 "" H 1950 1600 50  0001 C CNN
-F 3 "~" H 1950 1600 50  0001 C CNN
-	1    1950 1600
-	1    0    0    -1  
-$EndComp
 Text Notes 1900 1500 0    50   ~ 0
 12V
-$Comp
-L power:+12V #PWR?
-U 1 1 6015928A
-P 1750 1600
-F 0 "#PWR?" H 1750 1450 50  0001 C CNN
-F 1 "+12V" H 1765 1773 50  0000 C CNN
-F 2 "" H 1750 1600 50  0001 C CNN
-F 3 "" H 1750 1600 50  0001 C CNN
-	1    1750 1600
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 60159DB4
-P 1750 1700
-F 0 "#PWR?" H 1750 1450 50  0001 C CNN
-F 1 "GND" H 1755 1527 50  0000 C CNN
-F 2 "" H 1750 1700 50  0001 C CNN
-F 3 "" H 1750 1700 50  0001 C CNN
-	1    1750 1700
-	1    0    0    -1  
-$EndComp
 Text Notes 3775 1725 3    50   ~ 0
 Top - Connector 1
 Text Notes 3800 3300 3    50   ~ 0
@@ -89,7 +56,6 @@ Text GLabel 1600 1600 0    50   Input ~ 0
 VIN
 Wire Wire Line
 	1600 1600 1750 1600
-Connection ~ 1750 1600
 Text GLabel 4825 1600 1    50   Input ~ 0
 VIN
 Text GLabel 4875 3150 1    50   Input ~ 0
@@ -98,7 +64,6 @@ Text GLabel 1600 1700 0    50   Input ~ 0
 GND
 Wire Wire Line
 	1600 1700 1750 1700
-Connection ~ 1750 1700
 Text GLabel 4075 3150 1    50   Input ~ 0
 GND
 Text GLabel 4025 1600 1    50   Input ~ 0
@@ -130,8 +95,7 @@ DOUT1
 Text GLabel 4125 1600 1    50   Input ~ 0
 DOUT2
 Text GLabel 4225 1600 1    50   Input ~ 0
-EN
-NoConn ~ 4275 3150
+EN1
 Text GLabel 4375 3150 1    50   Input ~ 0
 DOUT3
 Text GLabel 4175 3150 1    50   Input ~ 0
@@ -152,10 +116,10 @@ BZZOUT1
 Text GLabel 4075 3750 3    50   Input ~ 0
 BZZOUT2
 $Comp
-L Jumper:SolderJumper_2_Open JP?
+L Jumper:SolderJumper_2_Open JP1
 U 1 1 6016FD9F
 P 6550 3300
-F 0 "JP?" H 6550 3505 50  0000 C CNN
+F 0 "JP1" H 6550 3505 50  0000 C CNN
 F 1 "CAN_Termination" H 6550 3414 50  0000 C CNN
 F 2 "" H 6550 3300 50  0001 C CNN
 F 3 "~" H 6550 3300 50  0001 C CNN
@@ -216,13 +180,14 @@ TXD2
 Text GLabel 1750 2500 0    50   Input ~ 0
 RXD2
 $Comp
-L Connector:Screw_Terminal_01x06 J?
+L Connector:Screw_Terminal_01x06 J2
 U 1 1 60179747
 P 1950 2300
-F 0 "J?" H 2030 2292 50  0000 L CNN
+F 0 "J2" H 2030 2292 50  0000 L CNN
 F 1 "Screw_Terminal_01x06" H 2030 2201 50  0000 L CNN
 F 2 "" H 1950 2300 50  0001 C CNN
 F 3 "~" H 1950 2300 50  0001 C CNN
+F 4 "https://www.reichelt.de/leiterplattenklemme-6-polig-rm-2-54-mm-dg308-2-54-6-p276218.html?&trstct=pos_2&nbc=1" H 1950 2300 50  0001 C CNN "LCSC"
 	1    1950 2300
 	1    0    0    -1  
 $EndComp
@@ -231,10 +196,10 @@ VIN
 Text GLabel 1750 2600 0    50   Input ~ 0
 GND
 $Comp
-L Connector:Screw_Terminal_01x06 J?
+L Connector:Screw_Terminal_01x06 J3
 U 1 1 6017BCBD
 P 1950 3075
-F 0 "J?" H 2030 3067 50  0000 L CNN
+F 0 "J3" H 2030 3067 50  0000 L CNN
 F 1 "Screw_Terminal_01x06" H 2030 2976 50  0000 L CNN
 F 2 "" H 1950 3075 50  0001 C CNN
 F 3 "~" H 1950 3075 50  0001 C CNN
@@ -246,10 +211,10 @@ VIN
 Text GLabel 1750 3375 0    50   Input ~ 0
 GND
 $Comp
-L Connector:Screw_Terminal_01x06 J?
+L Connector:Screw_Terminal_01x06 J4
 U 1 1 6017CC42
 P 1950 3850
-F 0 "J?" H 2030 3842 50  0000 L CNN
+F 0 "J4" H 2030 3842 50  0000 L CNN
 F 1 "Screw_Terminal_01x06" H 2030 3751 50  0000 L CNN
 F 2 "" H 1950 3850 50  0001 C CNN
 F 3 "~" H 1950 3850 50  0001 C CNN
@@ -260,4 +225,41 @@ Text GLabel 1750 4150 0    50   Input ~ 0
 GND
 Text GLabel 1750 3650 0    50   Input ~ 0
 VIN
+$Comp
+L Connector:Screw_Terminal_01x06 J8
+U 1 1 60182996
+P 1950 4675
+F 0 "J8" H 2030 4667 50  0000 L CNN
+F 1 "Screw_Terminal_01x06" H 2030 4576 50  0000 L CNN
+F 2 "" H 1950 4675 50  0001 C CNN
+F 3 "~" H 1950 4675 50  0001 C CNN
+	1    1950 4675
+	1    0    0    -1  
+$EndComp
+Text GLabel 1750 4575 0    50   Input ~ 0
+EN1
+Text GLabel 1750 4775 0    50   Input ~ 0
+BZZOUT1
+Text GLabel 1750 4875 0    50   Input ~ 0
+BZZOUT2
+Text GLabel 4275 3150 1    50   Input ~ 0
+EN2
+Text GLabel 1750 4675 0    50   Input ~ 0
+EN2
+Text GLabel 1750 4975 0    50   Input ~ 0
+GND
+Text GLabel 1750 4475 0    50   Input ~ 0
+VIN
+$Comp
+L Connector:Screw_Terminal_01x02 J1
+U 1 1 601581C2
+P 1950 1600
+F 0 "J1" H 2030 1592 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 2030 1501 50  0000 L CNN
+F 2 "" H 1950 1600 50  0001 C CNN
+F 3 "~" H 1950 1600 50  0001 C CNN
+F 4 "https://www.reichelt.de/leiterplattenklemme-2-polig-rm-2-54-mm-dg308-2-54-2-p276214.html?&trstct=pos_6&nbc=1" H 1950 1600 50  0001 C CNN "LCSC"
+	1    1950 1600
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

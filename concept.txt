@@ -1,0 +1,3 @@
+Sub D 15 HD  Female.  Direct connect to AD57 connector. 
+1 x RJ45 CAN  +   Screw Contacts for everything else. (Power, RS232, Audio,... )
+

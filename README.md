@@ -6,3 +6,6 @@ AD57 Vario Hardware adapter
 
 
 ![3D Model](ad57_adapter/plots/ad57_adapter_bottom.jpg)
+
+
+![3D Model](ad57_adapter/plots/pcb.png)
